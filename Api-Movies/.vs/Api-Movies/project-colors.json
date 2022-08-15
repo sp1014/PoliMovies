@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4e5c588d-5edb-4f00-8512-4052606a8845": {
+      "ProjectGuid": "4e5c588d-5edb-4f00-8512-4052606a8845",
+      "DisplayName": "Api-Movies",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
