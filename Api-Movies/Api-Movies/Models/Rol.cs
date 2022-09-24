@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 namespace Api_Movies.Models
 {
-    public class Roles
+    public class Rol
     {
         [Key]
         public int Id { get; set; }
