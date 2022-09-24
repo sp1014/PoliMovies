@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Api_Movies.Models;
 using Api_Movies.Core.UserDataManager;
+using Api_Movies.Core.LoginManager;
+using Api_Movies.Core.UserManager;
 
 namespace Api_Movies
 {
@@ -46,15 +48,16 @@ namespace Api_Movies
             services.AddCors();
             services.AddControllers();
             #region Inyeccion de dependencias
-           // services.AddScoped<IUserManager, UserManager>();
+            services.AddScoped<IUserManager, UserManager>();
             services.AddScoped<IUserDataManager, UserDataManager>();
-           /* services.AddScoped<ILoginManager, LoginManager>();
-            services.AddScoped<ICourseManager, CourseManager>();
-            services.AddScoped<ICalificacionManager, CalificacionManager>();
-            services.AddScoped<IAllocationLoadManager, AllocationLoadManager>();
-            services.AddScoped<IFollowUpCourseManager, FollowUpCourseManager>();
-            services.AddScoped<IScheduleManager, ScheduleManager>();
-            services.AddScoped<IGradeManager, GradeManager>();*/
+            services.AddScoped<ILoginManager, LoginManager>();
+            /* 
+             services.AddScoped<ICourseManager, CourseManager>();
+             services.AddScoped<ICalificacionManager, CalificacionManager>();
+             services.AddScoped<IAllocationLoadManager, AllocationLoadManager>();
+             services.AddScoped<IFollowUpCourseManager, FollowUpCourseManager>();
+             services.AddScoped<IScheduleManager, ScheduleManager>();
+             services.AddScoped<IGradeManager, GradeManager>();*/
             #endregion
             services.AddDbContext<UsersContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("GestionPoli")));
             //This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32.
