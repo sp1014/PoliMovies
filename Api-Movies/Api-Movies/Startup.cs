@@ -59,7 +59,7 @@ namespace Api_Movies
              services.AddScoped<IScheduleManager, ScheduleManager>();
              services.AddScoped<IGradeManager, GradeManager>();*/
             #endregion
-            services.AddDbContext<UsersContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("GestionPoli")));
+            services.AddDbContext<UsersContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("PoliMovies")));
             //This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32.
             services.AddControllers().AddNewtonsoftJson(options =>
             options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore

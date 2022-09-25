@@ -5,8 +5,8 @@ namespace Api_Movies.Models
     public class Qualification
     {
         [Key]
-        private int Id { get; set; }
-        private string Qualifications { get; set; }
-        private string Commentary { get; set;}
+        public int Id { get; set; }
+        public string Qualifications { get; set; }
+        public string Commentary { get; set;}
     }
 }

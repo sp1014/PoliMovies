@@ -1,10 +1,12 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Api_Movies.Models
 {
     public class Movie
     {
+        [Key]
         public int Id { get; set; }
         public string TitleMovie { get; set; }
         public DateTime DateProduction { get; set; }
