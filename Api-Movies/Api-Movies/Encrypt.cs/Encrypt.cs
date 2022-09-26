@@ -8,6 +8,11 @@ namespace Api_Movies
 {
     public class Encrypt
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         public static string GetSHA256(string str)
         {
             SHA256 sha256 = SHA256Managed.Create();
