@@ -32,10 +32,12 @@ namespace Api_Movies.Controllers
             _context = context;
          
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
 
-        [HttpPost, Route("cargar-archivo")]
-
-      
+        [HttpPost, Route("cargar-archivo")]      
             public async Task<ActionResult> UploadFile()
             {
             var file = Request.Form.Files[0];
@@ -55,16 +57,19 @@ namespace Api_Movies.Controllers
                 using (var stream = new FileStream(RutaFullCompleta, FileMode.Create))
                 {
                     file.CopyTo(stream);
-
                 }
                 await Post(NombreArchivo, RutaCompleta);
-
             }
-
-            //Se retorna la variable "resultado" como resultado de una tarea
             return Ok(RutaCompleta);
 
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="NombreArchivo"></param>
+        /// <param name="RutaCompleta"></param>
+        /// <returns></returns>
 
         [HttpPost]
         public async Task<ActionResult> Post(string NombreArchivo, string RutaCompleta)
@@ -89,16 +94,6 @@ namespace Api_Movies.Controllers
             }
             return Ok(resultado);
         }
-
-        /*public async Task<ActionResult> Post(File file)
-        {
-            var result = await _fileManager.CreateAsync(file);
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result.Errors);
-        }*/
 
     }
 }

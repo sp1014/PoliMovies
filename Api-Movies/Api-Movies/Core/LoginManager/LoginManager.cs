@@ -21,6 +21,11 @@ namespace Api_Movies.Core.LoginManager
         private const string _ERROR_EMAIL = "Email already exists";
         private const string _ERROR_USER = "this data does not exist";
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<ResultHelper<User>> GetByIdAsync(int id)
         {
             var resultado = new ResultHelper<User>();
@@ -36,6 +41,12 @@ namespace Api_Movies.Core.LoginManager
             }
             return resultado;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public async Task<ResultHelper<User>> LoginAsync(User user)
         {
             var resultado = new ResultHelper<User>();

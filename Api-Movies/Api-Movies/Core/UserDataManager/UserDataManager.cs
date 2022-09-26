@@ -21,6 +21,11 @@ namespace Api_Movies.Core.UserDataManager
         private const string _ERROR_USER = "this data does not exist";
         private const string _ERROR_EMAIL = "Email already exists";
         private const string _ERROR_LIST = "There is no user at this time";
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public async Task<ResultHelper<IEnumerable<Rol>>> GetUsersDataAsync()
         {
             var resultado = new ResultHelper<IEnumerable<Rol>>();
@@ -37,6 +42,11 @@ namespace Api_Movies.Core.UserDataManager
             }
             return resultado;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
 
         public async Task<ResultHelper<Rol>> GetByIdAsync(int id)
         {
@@ -54,7 +64,11 @@ namespace Api_Movies.Core.UserDataManager
             return resultado;
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="rol"></param>
+        /// <returns></returns>
         public async Task<ResultHelper<Rol>> CreateRolAsync(Rol rol)
         {
             var resultado = new ResultHelper<Rol>();
@@ -76,10 +90,15 @@ namespace Api_Movies.Core.UserDataManager
             return resultado;
         }
 
-     
+     /// <summary>
+     /// 
+     /// </summary>
+     /// <param name="rol"></param>
+     /// <param name="id"></param>
+     /// <returns></returns>
 
               public async Task<ResultHelper<Rol>> UpdateRolAsync(Rol rol , int id)
-        {
+              {
             var resultado = new ResultHelper<Rol>();
             try
             {
@@ -108,8 +127,11 @@ namespace Api_Movies.Core.UserDataManager
             return resultado;
         }
 
-        //Type Document
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public async Task<ResultHelper<IEnumerable<TypeDoc>>> GetUsersDocAsync()
         {
             var resultado = new ResultHelper<IEnumerable<TypeDoc>>();
@@ -127,6 +149,11 @@ namespace Api_Movies.Core.UserDataManager
             return resultado;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<ResultHelper<TypeDoc>> GetByIdDocAsync(int id)
         {
             var resultado = new ResultHelper<TypeDoc>();
@@ -143,6 +170,11 @@ namespace Api_Movies.Core.UserDataManager
             return resultado;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="typedoc"></param>
+        /// <returns></returns>
         public async Task<ResultHelper<TypeDoc>> CreateDocAsync(TypeDoc typedoc)
         {
             var resultado = new ResultHelper<TypeDoc>();
@@ -163,7 +195,12 @@ namespace Api_Movies.Core.UserDataManager
             }
             return resultado;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="typedoc"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<ResultHelper<TypeDoc>> UpdateDocAsync(TypeDoc typedoc, int id)
         {
             var resultado = new ResultHelper<TypeDoc>();

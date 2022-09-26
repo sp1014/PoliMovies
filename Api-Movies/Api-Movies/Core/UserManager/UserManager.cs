@@ -20,6 +20,10 @@ namespace Api_Movies.Core.UserManager
         private const string _ERROR_USER = "this data does not exist";
         private const string _ERROR_EMAIL = "Email already exists";
         private const string _ERROR_LIST = "There is no user at this time";
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public async Task<ResultHelper<IEnumerable<User>>> GetUsersAsync()
         {
             var resultado = new ResultHelper<IEnumerable<User>>();
@@ -36,6 +40,11 @@ namespace Api_Movies.Core.UserManager
             }
             return resultado;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<ResultHelper<User>> GetByIdAsync(int id)
         {
             var resultado = new ResultHelper<User>();
@@ -51,7 +60,11 @@ namespace Api_Movies.Core.UserManager
             }
             return resultado;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public async Task<ResultHelper<User>> CreateAsync(User user)
         {
             var resultado = new ResultHelper<User>();
@@ -93,7 +106,12 @@ namespace Api_Movies.Core.UserManager
             }
             return resultado;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<ResultHelper<User>> UpdateAsync(User user, int id)
         {
             var resultado = new ResultHelper<User>();

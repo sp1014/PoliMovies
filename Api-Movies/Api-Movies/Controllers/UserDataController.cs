@@ -16,8 +16,12 @@ namespace Api_Movies.Controllers
         {
             _userDataManager = userManager;
         }
-        [AllowAnonymous]
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [AllowAnonymous]
         [HttpGet ("Rol")]
         public async Task<ActionResult> GetAll()
         {
@@ -28,6 +32,11 @@ namespace Api_Movies.Controllers
             }
             return NotFound(usersResult.Errors);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [AllowAnonymous]
         [HttpGet("Rol/{id}")]
         public async Task<ActionResult> GetById(int id)
@@ -39,6 +48,11 @@ namespace Api_Movies.Controllers
             }
             return NotFound(ordenResult.Errors);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="rol"></param>
+        /// <returns></returns>
         [HttpPost("Rol")]
         public async Task<ActionResult> Post(Rol rol)
         {
@@ -49,6 +63,12 @@ namespace Api_Movies.Controllers
             }
             return BadRequest(result.Errors);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="rol"></param>
+        /// <returns></returns>
 
         [HttpPut("Rol/{id}")]
         public async Task<ActionResult> Put(int id, Rol rol)
@@ -60,9 +80,11 @@ namespace Api_Movies.Controllers
             }
             return BadRequest(result.Errors);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
 
-
-        // Type Doc
         [AllowAnonymous]
         [HttpGet("Doc")]
         public async Task<ActionResult> GetAllDoc()
@@ -74,6 +96,12 @@ namespace Api_Movies.Controllers
             }
             return NotFound(usersResult.Errors);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [AllowAnonymous]
         [HttpGet("Doc/{id}")]
         public async Task<ActionResult> GetByIdDoc(int id)
@@ -86,6 +114,11 @@ namespace Api_Movies.Controllers
             return NotFound(ordenResult.Errors);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="typedoc"></param>
+        /// <returns></returns>
         [HttpPost("Doc")]
         public async Task<ActionResult> PostDoc(TypeDoc typedoc)
         {
@@ -97,6 +130,12 @@ namespace Api_Movies.Controllers
             return BadRequest(result.Errors);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="typedoc"></param>
+        /// <returns></returns>
         [HttpPut("Doc/{id}")]
         public async Task<ActionResult> PutDoc(int id, TypeDoc typedoc)
         {
@@ -107,5 +146,6 @@ namespace Api_Movies.Controllers
             }
             return BadRequest(result.Errors);
         }
+      
     }
 }

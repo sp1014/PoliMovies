@@ -2,6 +2,10 @@
 
 namespace Api_Movies.Helpers
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class ResultHelper<T>
     {
         public T Value { get; set; }

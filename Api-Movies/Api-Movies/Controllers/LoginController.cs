@@ -27,6 +27,11 @@ namespace Api_Movies.Controllers
             config = _config;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)
         {
@@ -37,6 +42,12 @@ namespace Api_Movies.Controllers
             }
             return NotFound(ordenResult.Errors);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult> PostLogin(User user)
@@ -44,7 +55,6 @@ namespace Api_Movies.Controllers
             var result = await _loginManager.LoginAsync(user);
             if (result.Success)
             {
-                // return CreatedAtAction(nameof(GetById), new { id = result.Value.Id }, result.Value);
                 var secretKey = config.GetValue<string>("SecretKey");
                 var key = Encoding.ASCII.GetBytes(secretKey);
 
@@ -66,6 +76,11 @@ namespace Api_Movies.Controllers
             }
             return Ok(result.Errors);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Get()
         {

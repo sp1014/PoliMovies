@@ -19,6 +19,10 @@ namespace Api_Movies.Controllers
         {
             _userManager = userManager;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult> GetAll()
@@ -30,6 +34,11 @@ namespace Api_Movies.Controllers
             }
             return NotFound(usersResult.Errors);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)
@@ -41,6 +50,11 @@ namespace Api_Movies.Controllers
             }
             return NotFound(ordenResult.Errors);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<ActionResult> Post(User user)
         {
@@ -52,6 +66,12 @@ namespace Api_Movies.Controllers
             return BadRequest(result.Errors);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="user"></param>
+        /// <returns></returns>
 
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, User user)

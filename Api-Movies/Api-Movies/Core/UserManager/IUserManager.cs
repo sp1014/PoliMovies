@@ -7,11 +7,30 @@ namespace Api_Movies.Core.UserManager
 {
     public interface IUserManager
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         Task<ResultHelper<IEnumerable<User>>> GetUsersAsync();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         Task<ResultHelper<User>> GetByIdAsync(int id);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         Task<ResultHelper<User>> CreateAsync(User user);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         Task<ResultHelper<User>> UpdateAsync(User user, int id);
-        // Task<ResultHelper<User>> GetByIdListAsync(int id);
 
 
     }
