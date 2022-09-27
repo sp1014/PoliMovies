@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Music\\Estructuras\\Api-Movies\\Api-Movies\\Api-Movies.csproj": {}
+    "C:\\Users\\SANTI\\OneDrive\\Documentos\\Universidad\\Semestre 2\\Ingenieria de software 2\\PoliMovies\\Api-Movies\\Api-Movies\\Api-Movies.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Music\\Estructuras\\Api-Movies\\Api-Movies\\Api-Movies.csproj": {
+    "C:\\Users\\SANTI\\OneDrive\\Documentos\\Universidad\\Semestre 2\\Ingenieria de software 2\\PoliMovies\\Api-Movies\\Api-Movies\\Api-Movies.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Music\\Estructuras\\Api-Movies\\Api-Movies\\Api-Movies.csproj",
+        "projectUniqueName": "C:\\Users\\SANTI\\OneDrive\\Documentos\\Universidad\\Semestre 2\\Ingenieria de software 2\\PoliMovies\\Api-Movies\\Api-Movies\\Api-Movies.csproj",
         "projectName": "Api-Movies",
-        "projectPath": "C:\\Users\\user\\Music\\Estructuras\\Api-Movies\\Api-Movies\\Api-Movies.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Music\\Estructuras\\Api-Movies\\Api-Movies\\obj\\",
+        "projectPath": "C:\\Users\\SANTI\\OneDrive\\Documentos\\Universidad\\Semestre 2\\Ingenieria de software 2\\PoliMovies\\Api-Movies\\Api-Movies\\Api-Movies.csproj",
+        "packagesPath": "C:\\Users\\SANTI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SANTI\\OneDrive\\Documentos\\Universidad\\Semestre 2\\Ingenieria de software 2\\PoliMovies\\Api-Movies\\Api-Movies\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\SANTI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,16 +39,67 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -61,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.106\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
