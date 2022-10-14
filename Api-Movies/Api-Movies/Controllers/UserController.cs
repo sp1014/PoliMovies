@@ -35,7 +35,7 @@ namespace Api_Movies.Controllers
             return NotFound(usersResult.Errors);
         }
         /// <summary>
-        /// 
+        /// Method to obtain the id data
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

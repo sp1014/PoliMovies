@@ -28,7 +28,7 @@ namespace Api_Movies.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Method to obtain the id data
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

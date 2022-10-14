@@ -1,10 +1,9 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+   
+<router-view/>
+   
+  
   </div>
 </template>
 
@@ -30,3 +29,17 @@
   color: #42b983;
 }
 </style>
+
+<script> 
+//import frontPage from './components/frontPage';
+// import movieInfo from './views/movieInfo.vue';
+
+//  export default {
+//    name: 'app',
+//    components: {
+// movieInfo,
+
+
+//   }
+//  }
+</script>

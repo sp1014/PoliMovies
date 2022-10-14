@@ -8,12 +8,12 @@ namespace Api_Movies.Core.UserDataManager
     public interface IUserDataManager
     {
         /// <summary>
-        /// 
+        /// In this asynchronous operation, the Result Helper class is called to obtain the Rol  model.
         /// </summary>
         /// <returns></returns>
         Task<ResultHelper<IEnumerable<Rol>>> GetUsersDataAsync();
         /// <summary>
-        /// 
+        /// In this asynchronous operation, the Result Helper class is called and id is returned.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

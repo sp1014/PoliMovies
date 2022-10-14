@@ -33,7 +33,7 @@ namespace Api_Movies.Controllers
          
         }
         /// <summary>
-        /// 
+        /// an asynchronous method is published to obtain the upload of a file to the directory
         /// </summary>
         /// <returns></returns>
 
@@ -65,7 +65,7 @@ namespace Api_Movies.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Asynchronous method to upload file name and path
         /// </summary>
         /// <param name="NombreArchivo"></param>
         /// <param name="RutaCompleta"></param>

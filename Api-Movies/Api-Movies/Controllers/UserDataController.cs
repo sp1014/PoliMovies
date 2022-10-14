@@ -18,7 +18,7 @@ namespace Api_Movies.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Method to obtain role data
         /// </summary>
         /// <returns></returns>
         [AllowAnonymous]

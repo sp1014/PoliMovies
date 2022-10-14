@@ -3,7 +3,7 @@
 namespace Api_Movies.Helpers
 {
     /// <summary>
-    /// 
+    /// In this class result helper are the lists of errors that are going to be obtained
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class ResultHelper<T>
