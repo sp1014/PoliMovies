@@ -61,7 +61,7 @@
           </select>
         </div>
 
-        <button class="btn btn-primary">Sign in</button>
+        <button class="btn btn-primary"  v-on:click="login()">Sign in</button>
 
       </div>
 
@@ -1133,17 +1133,20 @@
 </template>
 <style>
 @import '../assets/css/frontPage.css';
+
 </style>
 <script src="../assets/js/frontPage.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script>
-// import '../assets/js/frontPage.js';
 export default {
     name: 'frontPage',
     methods: {
   salir(){
             this.$router.push("/movieInfo");
+        },
+        login(){
+          this.$router.push("/login")
         }
 },
 }
