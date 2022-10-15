@@ -18,6 +18,6 @@ namespace Api_Movies.Core.LoginManager
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        Task<ResultHelper<User>> GetByIdAsync(int id);
+        Task<ResultHelper<User>> GetByIdAsync(string email);
     }
 }

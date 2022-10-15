@@ -26,23 +26,7 @@ namespace Api_Movies.Controllers
             _loginManager = loginManager;
             config = _config;
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        [HttpGet("{id}")]
-        public async Task<ActionResult> GetById(int id)
-        {
-            var ordenResult = await _loginManager.GetByIdAsync(id);
-            if (ordenResult.Success)
-            {
-                return Ok(ordenResult.Value);
-            }
-            return NotFound(ordenResult.Errors);
-        }
-
+     
         /// <summary>
         /// 
         /// </summary>
@@ -82,10 +66,16 @@ namespace Api_Movies.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult Get()
+        public async Task<ActionResult> Get()
         {
             var r = ((ClaimsIdentity)User.Identity).FindFirst(ClaimTypes.NameIdentifier);
-            return Ok(r == null ? "" : r.Value);
+            var ordenResult = await _loginManager.GetByIdAsync(r.Value);
+            if (ordenResult.Success)
+            {
+                return Ok(ordenResult.Value);
+            }
+            return NotFound(ordenResult.Errors);
+
         }
     }
 }

@@ -21,15 +21,11 @@ namespace Api_Movies.Core.LoginManager
         private const string _ERROR_EMAIL = "Email already exists";
         private const string _ERROR_USER = "this data does not exist";
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public async Task<ResultHelper<User>> GetByIdAsync(int id)
+       
+        public async Task<ResultHelper<User>> GetByIdAsync(string email)
         {
             var resultado = new ResultHelper<User>();
-            var user = await _context.Users.FirstOrDefaultAsync(s => s.Id == id);
+            var user = await _context.Users.Include(s => s.Rol).Include(s => s.TypeDoc).FirstOrDefaultAsync(s => s.Email == email);
             if (user != null)
             {
                 resultado.Value = user;
