@@ -473,15 +473,23 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script>
+
 export default {
   name: "movieInfo",
+
   methods: {
-    login() {
-      this.$router.push("login");
+    clearFile(){
+      this.clearMovies.Name ="",
+      this.clearMovies.Archivo=""
     },
+    login() {
+      this.$router.push("/login");
+    },
+
   },
 };
 </script>
 
 <style scoped>
+
 </style>

@@ -8,8 +8,8 @@
     <title>Document</title>
 </head>
     
-           <font  color="white">Usuario:</font>  <input name="username" type="text" class="form-control mr-3" placeholder="Username">
-           <font  color="white">Contraseña:</font> <input name="password" type="password" class="form-control mr-3" placeholder="Password">
+           <font  color="white">Usuario:</font>  <input name="gmail" v-model="email"  type="text" class="form-control mr-3" placeholder="Username">
+           <font  color="white">Contraseña:</font> <input name="password" v-model="password" type="password" class="form-control mr-3" placeholder="Password">
       
       <button type="submit"  class="btn btn-primary">Iniciar Sesión</button>
       <a  v-on:click="formUser()" class="btn btn-primary">  Registrarse</a>
@@ -19,15 +19,30 @@
  </div>
 </template>
 <style lang="">
-    
 </style>
 <script>
+// import axios from 'axios';
+
 export default {
     name: 'login',
+    data:function() {
+      return{
+        email: "",
+        password: ""
+      }  
+    },
     methods:{
-        formUser() {
-this.$router.push("/createdUser");
-        }
+         formUser() {
+ this.$router.push("/createdUser");
+         },
+         login(){
+             let log = {
+                 "email" : this.email,
+                 "password" : this.password
+             };
+             axios.post('https://localhost:44375/api/User/',log)
+          
+         }
     }
 }
 </script>
