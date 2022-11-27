@@ -17,6 +17,10 @@ namespace Api_Movies.Controllers
             _userDataManager = userManager;
         }
 
+        public UserDataController()
+        {
+        }
+
         /// <summary>
         /// 
         /// </summary>

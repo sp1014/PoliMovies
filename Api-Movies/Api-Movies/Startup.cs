@@ -13,6 +13,14 @@ using Api_Movies.Models;
 using Api_Movies.Core.UserDataManager;
 using Api_Movies.Core.LoginManager;
 using Api_Movies.Core.UserManager;
+using Api_Movies.Core.FileManager;
+using Api_Movies.Core.MovieManager;
+using Api_Movies.Core.RentalManager;
+using Api_Movies.Core.SaleManager;
+using Api_Movies.Core.ColectionsManager;
+using Api_Movies.Core.QualificationManager;
+using Api_Movies.Core.SerieManager;
+using Api_Movies.Core.IdiomManager;
 
 namespace Api_Movies
 {
@@ -51,6 +59,14 @@ namespace Api_Movies
             services.AddScoped<IUserManager, UserManager>();
             services.AddScoped<IUserDataManager, UserDataManager>();
             services.AddScoped<ILoginManager, LoginManager>();
+            services.AddScoped<IFileManager, FileManager>();
+            services.AddScoped<IMovieManager, MovieManager>();
+            services.AddScoped<IRentalManager, RentalManager>();
+            services.AddScoped<ISaleManager, SaleManager>();
+            services.AddScoped<IColectionsManager, ColectionsManager>();
+            services.AddScoped<IQualificationManager, QualificationManager>();
+            services.AddScoped<ISerieManager, SerieManager>();
+            services.AddScoped<IIdiomManager, IdiomManager>();
             /* 
              services.AddScoped<ICourseManager, CourseManager>();
              services.AddScoped<ICalificacionManager, CalificacionManager>();

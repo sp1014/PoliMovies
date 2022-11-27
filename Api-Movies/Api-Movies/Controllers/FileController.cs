@@ -15,6 +15,7 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Api_Movies.Helpers;
 using File = Api_Movies.Models.File;
+using Api_Movies.Core.FileManager;
 
 namespace Api_Movies.Controllers
 {
@@ -25,17 +26,31 @@ namespace Api_Movies.Controllers
 
         private readonly IWebHostEnvironment _env;
         private readonly UsersContext _context;
+        private readonly IFileManager _fileManager;
 
-        public FileController(IWebHostEnvironment env, UsersContext context)
+        public FileController(IWebHostEnvironment env, UsersContext context, IFileManager fileManager)
         {
             _env = env;
             _context = context;
-         
+            _fileManager = fileManager;
         }
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
+        /// 
+        [AllowAnonymous]
+        [HttpGet("{id}")]
+        public async Task<ActionResult> GetById(int id)
+        {
+            var ordenResult = await _fileManager.GetByIdAsync(id);
+            if (ordenResult.Success)
+            {
+                return Ok(ordenResult.Value);
+            }
+            return NotFound(ordenResult.Errors);
+        }
+
 
         [HttpPost, Route("cargar-archivo")]      
             public async Task<ActionResult> UploadFile()
@@ -93,6 +108,18 @@ namespace Api_Movies.Controllers
                 resultado.AddError(e.Message);
             }
             return Ok(resultado);
+        }
+
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<ActionResult> GetAll()
+        {
+            var usersResult = await _fileManager.GetFilesAsync();
+            if (usersResult.Success)
+            {
+                return Ok(usersResult.Value);
+            }
+            return NotFound(usersResult.Errors);
         }
 
     }

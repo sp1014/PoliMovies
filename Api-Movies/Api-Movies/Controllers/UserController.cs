@@ -14,6 +14,9 @@ namespace Api_Movies.Controllers
     {
         private readonly IUserManager _userManager;
 
+        public UserController()
+        {
+        }
 
         public UserController(IUserManager userManager)
         {
